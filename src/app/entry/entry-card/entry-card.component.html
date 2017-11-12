@@ -1,0 +1,55 @@
+<div class="ui card">
+  <div class="content">
+    <div class="header">{{ entry.name }}</div>
+    <span></span>
+    <span class="right floated star">
+      <a class="ui image label">
+        <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg"> {{ entry.createUser.username}}
+      </a>
+    </span>
+  </div>
+  <div class="content">
+    <div class="ui small feed">
+      <h4 class="ui sub header">Definition: </h4>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+            {{ entry.definition }}
+          </div>
+        </div>
+      </div>
+      <h4 class="ui sub header">Example: </h4>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+            {{ entry.example }}
+          </div>
+        </div>
+      </div>
+      <h4 class="ui sub header"></h4>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+              <a *ngFor="let tag of entry.tags" class="ui teal mini label">
+                  {{ tag.name }}
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="extra content">
+    <i class="heart icon"></i>
+    <i class="thumbs up icon"></i>
+    <a>12</a>
+    <i class="thumbs down icon"></i>
+    <a>23</a>
+    <i class="comment icon"></i>
+    <a>44</a>
+    <i class="share square icon"></i>
+    <span class="right floated star">
+      <i class="wait icon"></i>
+      {{ entry.createTime }}
+    </span>
+  </div>
+</div>
