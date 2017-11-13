@@ -7,6 +7,7 @@ import { HotEntriesComponent } from './hot-entries/hot-entries.component';
 import { RandomEntriesComponent } from './random-entries/random-entries.component';
 import { EntryListComponent } from '../entry/entry-list/entry-list.component';
 import { EntryCardComponent } from '../entry/entry-card/entry-card.component';
+import { AddEntryCardComponent } from './add-entry-card/add-entry-card.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { EntryCardComponent } from '../entry/entry-card/entry-card.component';
     HotEntriesComponent,
     RandomEntriesComponent,
     EntryListComponent,
-    EntryCardComponent
+    EntryCardComponent,
+    AddEntryCardComponent
   ]
 })
 export class HomeModule { }
