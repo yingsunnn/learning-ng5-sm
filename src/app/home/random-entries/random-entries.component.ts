@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
 import { Entry } from '../../models'
 
@@ -18,7 +18,12 @@ export class RandomEntriesComponent implements OnInit {
 
   ngOnInit() {
     let headers = new HttpHeaders().set("time_zone", "UTC-05:00");
-    this.http.get<Array<Entry>>('https://13.114.98.107:8443/entries', { headers })
+
+    const params = new HttpParams()
+    .set('page', '0')
+    .set('size', '10');
+
+    this.http.get<Array<Entry>>('https://13.114.98.107:8443/entries', { headers, params }, )
       .subscribe(data => {
         this.entries = data;
         console.log("success data", data);

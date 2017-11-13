@@ -1,11 +1,33 @@
 <div class="ui grid">
-  <div class="two wide column"></div>
-  <div class="two wide column">111</div>
+  <div class="one wide column"></div>
+
+  <div class="three wide column">
+    <div class="ui vertical menu">
+      <a class="item" routerLink="/home/hot-entries">Hot Entries</a>
+
+      <a class="item" routerLink="/home/random-entries">Random Entries</a>
+
+      <a class="item">
+        Latest Entries
+      </a>
+    </div>
+  </div>
+
   <div class="seven wide column">
     <app-add-entry-card></app-add-entry-card>
     <br/>
     <router-outlet></router-outlet>
   </div>
-  <div class="three wide column">111</div>
+
+  <div class="three wide column">
+    <div class="ui piled segment">
+      <h4 class="ui header">Hot tags</h4>
+      <a class="ui teal tiny basic label">tag 1</a>
+      <a class="ui teal tiny basic label">tag2</a>
+      <a class="ui teal tiny basic label">tag3</a>
+      <a class="ui teal tiny basic label">Featured</a>
+    </div>
+  </div>
+
   <div class="two wide column"></div>
 </div>
