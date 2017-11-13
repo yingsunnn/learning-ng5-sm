@@ -34,8 +34,8 @@ export class HotEntriesComponent implements OnInit {
     entry.name = "B脸";
     entry.definition = "beautiful face的简称";
     entry.example = "请用您的B脸解锁手机.";
-    entry.createTime = "Yesterday";
-    entry.createUser = user;
+    entry.create_time = "Yesterday";
+    entry.create_user = user;
     entry.tags = tags;
 
     let entry2: Entry = new Entry();
@@ -43,8 +43,8 @@ export class HotEntriesComponent implements OnInit {
     entry2.name = "高帅富";
     entry2.definition = "又作“高富帅”，形容一类男生：个子高（180+？），脸长得帅，家里富。常与白富美相结合，与屌丝相反。";
     entry2.example = "看过余罪吗？把余罪颠倒过来，就是典型高帅富啦。";
-    entry2.createTime = "Yesterday";
-    entry2.createUser = user;
+    entry2.create_time = "Yesterday";
+    entry2.create_user = user;
     entry2.tags = tags;
 
     this.entries.push(entry);

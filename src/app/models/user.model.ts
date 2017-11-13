@@ -4,6 +4,6 @@ export class User {
     email: string;
     bio: string;
     status: string;
-    createTime: string;
-    updateTime: string;
+    create_time: string;
+    update_time: string;
 }

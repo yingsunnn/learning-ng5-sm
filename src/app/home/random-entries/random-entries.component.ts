@@ -1,4 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from "rxjs/Observable";
+import { Entry } from '../../models'
+
 
 @Component({
   selector: 'app-random-entries',
@@ -8,9 +12,23 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class RandomEntriesComponent implements OnInit {
 
-  constructor() { }
+  entries: Array<Entry> = new Array<Entry>();
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    let headers = new HttpHeaders().set("time_zone", "UTC-05:00");
+    this.http.get<Array<Entry>>('https://13.114.98.107:8443/entries', { headers })
+      .subscribe(data => {
+        this.entries = data;
+        console.log("success data", data);
+      },
+      response => {
+        console.log("Random call in error", response);
+      },
+      () => {
+        console.log("Random observable is now completed.");
+      });
   }
 
 }

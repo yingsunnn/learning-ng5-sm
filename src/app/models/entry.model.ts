@@ -9,8 +9,8 @@ export class Entry {
     definition: string;
     example: string;
     status: string;
-    createTime: string;
-    createUser: User;
+    create_time: string;
+    create_user: User;
     updateTime: string;
     updateUser: User;
     tags: Array<Tag> = [];

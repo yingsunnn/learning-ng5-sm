@@ -4,8 +4,8 @@ export class Comment {
     id: string;
     content: string;
     status: string;
-    createTime: string;
-    createUser: User;
-    updateTime: string;
-    updateuser: User;
+    create_time: string;
+    create_user: User;
+    update_time: string;
+    update_user: User;
 }
